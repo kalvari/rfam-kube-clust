@@ -13,5 +13,5 @@ spec:
         image: ikalvari/rfam-cloud:kubes
         command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"] # pod command or job command?
       restartPolicy: OnFailure
-  backoffLimit: 4
+backoffLimit: 4
 
