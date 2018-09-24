@@ -6,9 +6,11 @@ spec:
   containers:
     - name: rfam-cloud
       image: ikalvari/rfam-cloud:kubes
+      command: ["cmsearch"]
+      args: ["-h", ">", "/workdir/cmsearch_help.out"]
       volumeMounts:
       - mountPath: "/workdir"
-        name: testglustfsclaim
+        name: testglustfsclaim 
   volumes:
     - name: testglustfsclaim
       persistentVolumeClaim:
