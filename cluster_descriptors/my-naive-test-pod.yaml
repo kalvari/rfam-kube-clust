@@ -15,4 +15,3 @@ spec:
     - name: testglustfsclaim
       persistentVolumeClaim:
         claimName: firstclaim
-      persistentVolumeReclaimPolicy: Retain
