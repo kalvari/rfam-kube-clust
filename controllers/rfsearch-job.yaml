@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rfsearch
+spec:
+  parallelism: 5
+  template:
+    metadata:
+      name: some-name-here-not-sure-if-it-should-be-container-temp-name
+    spec:
+      containers:
+      - name: rfam-cloud
+        image: ikalvari/rfam-cloud:kubes
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"] # pod command or job command?
+      restartPolicy: OnFailure
+backoffLimit: 4
+
