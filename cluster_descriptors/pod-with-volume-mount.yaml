@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: super-pod
+spec:
+  containers:
+    - name: rfam-cloud
+      image: ikalvari/rfam-cloud:kubes
+      volumeMounts:
+      - mountPath: "/workdir"
+        name: testglustfsclaim
+  volumes:
+    - name: testglustfsclaim
+      persistentVolumeClaim:
+        claimName: firstclaim
+      persistentVolumeReclaimPolicy: Retain
