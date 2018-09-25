@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rfam-svc
+spec:
+  selector:
+    app: rfam-builder
+  ports:
+  - protocol: TCP
+    port: 1023
+    targetPort: 9876
