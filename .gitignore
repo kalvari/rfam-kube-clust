@@ -1,0 +1,30 @@
+# Ignore ssh_keys
+*.sh
+ssh_key
+*key.*
+*.pem
+*.pub
+
+# Openstack openrc
+*openrc*
+
+# other misc
+Dockerfile
+Dockerfile_simple
+
+# Terraform
+terraform.* 
+.terraform/
+
+# junk sample code
+test_script.py
+trash/
+
+# inventory
+inventory
+
+# test k8s configs
+controllers/
+cluster_descriptors/
+master_files/
+
